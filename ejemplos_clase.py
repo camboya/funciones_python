@@ -69,6 +69,7 @@ def modulo():
     lista_palabras = ['sol', 'casa', 'nubes']
     it.ordenar_palabras(lista_palabras=lista_palabras, operador=2)
     it.print_palabras_ordenadas(lista_palabras=lista_palabras)
+    
 
     palabra = lista_palabras.pop(0)   # Extra la primera palabra, índice = 0
     cant_letras_palabra = cantidad_letras(palabra)

@@ -32,7 +32,8 @@ def ej1():
     Importe el módulo a este programa/documento para su uso
     en el resto de los ejercicios
     '''
-
+    import fabian  
+    
 
 def ej2():
     print("Jugando a los dados")
@@ -54,6 +55,10 @@ def ej2():
     de números generados.
     Imprimir en pantalla la lista ordenada
     '''
+    numeros = fabian.lista_aleatoria(inicio=1, fin=6, cantidad=5)
+    print(numeros)
+    print('el resultado del primer intento es:', fabian.ordenar(numeros=numeros))
+
 
 
 def ej3():
@@ -87,6 +92,19 @@ def ej3():
     vistos en clase para ver como se implementa max con esa key
 
     '''
+    dados = []
+    dados = fabian.lista_aleatoria(inicio=1, fin=6, cantidad=5)
+    print('el resultado de tirar los dados es\n{}'.format(dados))
+
+
+    for i in range(1,7):
+        cantidad_veces = fabian.contar(dados, i)
+
+    print('la cantidad de veces que aparece el numero {} es: {}' .format(i, cantidad_veces))
+    numero_repetido = max(dados, key= fabian.count)
+    print('el numero que repite es:', numero_repetido)
+
+        
 
 
 def ej4():
@@ -145,10 +163,43 @@ def ej4():
 
     '''
 
+    dados_guardados = []
+    tiros = []
+
+    if tiros == 0:
+        dados = fabian.lista_aleatoria(inicio=1, fin=6, cantidad=5)
+        max_num_repetido = max(dados, key=dados.count)
+        tiros = 1
+        print('Los Resultados del primer Tiro son: {}'.format(dados))
+
+    for i in dados:
+
+        if i == max_num_repetido:
+           dados_guardados.append(i)
+    print('Dados guardados:', dados_guardados)
+
+    
+
+    resultados_dados = fabian.resultados_dados(dados_guardados, max_num_repetido)
+    if resultados_dados == True:
+                print('Generala!')
+    else:
+        print('quedan lanzamientos')
+                
+
+
+            
+
+
+
+    
+
+
+
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    # ej1()
-    # ej2()
-    # ej3()
-    # ej4()
+    #ej1()
+    #ej2()
+    #ej3()
+    ej4()

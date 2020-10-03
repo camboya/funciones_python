@@ -19,17 +19,37 @@ import random
 
 
 def imprimir_nombre(nombre, apellido):
+    
+    print('nombre completo: {} {}'.format(nombre, apellido))
     pass
+
     # En este lugar debe colocar el "print" e imprimir
     # en pantalla el nombre y apellido que vienen por parámetro
     # print(.....)
+
+    
+
 
 
 def promedio(numeros):
     # Alumno:
     # 1) calcule el promedio
     # 2) use "return" para retornar ese valor
-    pass  # Cuando termine de implementar está función borrar "pass"
+    # Cuando termine de implementar está función borrar "pass"
+
+
+    cantidad_numeros = len(numeros)
+    sumatoria_numeros = sum(numeros)
+
+    if numeros == []:
+      print('no tiene notas para realizar el promedio,la lista esta vacia')
+
+    else:
+        promedio = sumatoria_numeros / cantidad_numeros
+        print('el promedio {} es: {}'.format(numeros, round(promedio, 2)))
+        return promedio
+
+    
 
 
 def ej1():
@@ -39,14 +59,15 @@ def ej1():
     # Esa función ya se encuentra a medio armar al principio de este archivo.
     # Debe cumpletar la función para que se imprima en pantalla su nombre y apellido
     # Debe invocar a la función como:
-    imprimir_nombre('mi_nombre', 'mi_apellido')
+    imprimir_nombre('Fabian', 'Gamboa')
+
 
     # Reemplazar por su nombre y apellido los textos
 
 
 def ej2():
     # Ejercicios con funciones del sistema
-    numeros = [2, 4, 6, 8, 10, 12]
+    
 
     '''
     Realice una funcion llamada "promedio" la cual
@@ -68,7 +89,7 @@ def ej2():
 
     Utilice esa función para calcular el promedio y luego
     imprima en pantalla el resultado
-
+   
     '''
     # La función ya se encuentra definida arriba de todo en el archivo,
     # busque al princpio de todo "def promedio"
@@ -80,6 +101,28 @@ def ej2():
     # promedio_re
 
     # Luego imprimir en pantalla el valor resultante, tal que:
+
+    numeros = [2, 4, 6, 8, 10, 12]
+    promedio_resul = promedio(numeros)
+
+    print('\n\nlista de numeros: {}'.format(numeros))
+
+
+    if promedio_resul is None:
+        print('\nno se pudo calcular promedio, la lista esta vacia')
+        print ('tiene 0 elementos. \n\n')
+
+    else:
+        print('\n el promedio de los numeros es: {} \n\n' .format(promedio_resul))
+
+
+
+    
+
+
+
+
+
 
 
 def ej3():
@@ -101,6 +144,16 @@ def ej3():
     # lista_ordenada = ordenar(numeros)
     # Imprimir en pantalla "lista_ordenada" que tendrá
     # los valores retornado por la función ordenar
+    
+    if numeros == []:
+        print('\n\n La lista esta vacia. ==> {}\n' .format(numeros))
+
+    else:
+        lista_ordenada = ordenar(numeros)
+
+    print('\n\n la lista de numeros es: {}') .format(numeros)
+    print('\n\n la lista de numeros ordenada de menor a mayor es: {}\n' .format(lista_ordenada))
+
 
 
 def ej4():
@@ -137,9 +190,10 @@ def ej4():
     '''
 
     # Invocar lista_aleatoria
-    # mi_lista_aleatorio = lista_aleatoria(inicio, fin, cantidad)
-    # print(mi_lista_aleatorio)
+    mi_lista_aleatorio = lista_aleatoria(inicio, fin, cantidad)
+    print('\n la lista aleatoria de numeros dentro del rango [{}, {} ] es :{}\n\n' .format(inicio, fin +1 , mi_lista_aleatorio)
 
+ 
 
 def ej5():
     # Ejercicios de listas y métodos
@@ -162,6 +216,24 @@ def ej5():
     # lista_numeros = lista_aleatoria(...,...,cantidad_numeros)
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # cantidad_tres = contar(lista_numeros, 3)
+
+    lista_numeros = lista_aleatoria(inicio,fin,cantidad numeros)
+    print('\n\n la lista aleatoria es: {}\n' .format(lista_numeros))
+
+    numero_repetido = 3
+    cantidad_veces = contar(lista_numeros, numero_repetido)
+
+    if cantidad_veces == 0:
+        cantidad_repeticiones = cantidad_veces
+
+    else:
+        cantidad_repeticiones = cantidad_veces -1
+
+    print('la cantidad de veces que aparece el numero {} es: {}'.format(numero_repetido, cantidad_veces))
+    print('la cantidad de veces que repite el numero {} es: {}\n\n'.formar(numero_repetido, cantidad_repeticiones))
+    
+
+    
 
 
 if __name__ == '__main__':
